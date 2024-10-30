@@ -1,113 +1,166 @@
 import Image from "next/image";
-
+import CR1 from "../images/carouselOne.jpg";
+import CRP1 from "../images/carouselOneP.jpg";
+import CRP2 from "../images/carouselOneP2.jpg";
+import icon1 from "../images/icons (1).svg"
+import icon2 from "../images/icons2.svg"
+import icon3 from "../images/icons3.svg"
+import FtLogo from "../images/footer.png"
+import ISO from "../images/iso.svg"
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    
+    <div className="bg-slate-950 min-h-screen">
+
+        {/* navbar   */}
+        <nav className="w-full h-14 bg-indigo-200 flex justify-between px-4 md:px-4 items-center">
+          <div className="text-2xl text-indigo-800 font-bold ">
+            <Image className="w-28 h-8" src={FtLogo} alt={"nv"}></Image>
+          </div>
+          <ul className="md:flex md:space-x-6 hidden font-medium ">
+            <li className="cursor-pointer text-xl">Home</li>
+            <li className="cursor-pointer text-xl">About</li>
+            <li className="cursor-pointer text-xl">Contact</li>
+          </ul>
+          <div className="hidden md:block px-2 py-2 bg-indigo-800 rounded-md text-white cursor-pointer">
+            Login/Signup
+          </div>
+          <div className="md:hidden">
+            <a className="text-4xl" href="#">&#8801;</a>
+          </div>
+        </nav>
+
+        {/* Hero Section */}
+        <header className="w-full h-auto">
+          <Image className="w-full hidden md:block" src={CR1} alt={"CR"}></Image>
+          <div>
+          <Image className="w-full md:hidden" src={CRP2} alt={"P2"}></Image>
+          <Image className="w-full md:hidden" src={CRP1} alt={"P1"}></Image>
+          </div>
+        </header>
+
+
+        <div className="h-auto w-full flex flex-col flex-wrap items-center text-center p-10">
+
+          {/* Students Section */}
+            <div className="w-full h-auto flex flex-col flex-wrap items-center">
+            <p className="text-indigo-800 text-2xl font-bold text-center md:text-4xl ">
+              "Pure Hardwork, No Shortcuts!"
+            </p>
+            <div className="w-32 md:w-48 h-1 border-b-4 border-yellow-500 mt-2 md:mt-4 rounded-2xl mb-12"></div>
+            </div>
+          
+            <div className="flex flex-wrap w-full justify-evenly border-2 border-white rounded-xl ">
+            <div className="w-72 flex flex-col items-center mb-12">
+              <Image className="w-44 h-44" src={icon1} alt={"icon1"}></Image>
+              <p className="text-3xl font-bold text-white">6000+</p>
+              <p className="text-2xl font-bold text-gray-400">Different Courses</p>          
+            </div>
+
+            <div className="w-72 flex flex-col items-center mb-12">
+              <Image className="w-44 h-44" src={icon2} alt={"icon2"}></Image>
+              <p className="text-3xl font-bold text-white">700,000++</p>
+              <p className="text-2xl font-bold text-gray-400">Students Enrolled</p>          
+            </div>
+
+            <div className="w-74 flex flex-col items-center mb-12">
+              <Image className="w-44 h-44" src={icon3} alt={"icon3"}></Image>
+              <p className="text-3xl font-bold text-white">10,000+</p>
+              <p className="text-2xl font-bold text-gray-400">Successful Transition</p>          
+            </div>
+            </div>
+
+           
+
+          {/* Products Section */}
+            <div className="w-full h-auto flex flex-col flex-wrap items-center mt-12">
+          <p className="text-indigo-800 text-2xl md:text-4xl font-bold  ">"Our Products"</p>
+          <div className="h-1 w-32 md:w-48 border-b-4 border-yellow-400 rounded-2xl mt-2 md:mt-4 mb-16"></div>
+            </div>
+
+            <div className=" h-auto flex flex-wrap w-full justify-around">
+            <div className="w-60 flex flex-col items-center mb-12">
+              <Image className="w-40 h-40" src={icon1} alt={"P1"}></Image>
+              <p className="text-white text-2xl font-bold">PW Skills Lab</p>
+              <p className="text-gray-400 font-medium text-xl ">Supercharge your project development with our robust lab.</p>
+            </div>
+
+            <div className="w-64 flex flex-col items-center mb-12">
+              <Image className="w-40 h-40" src={icon2} alt={"P1"}></Image>
+              <p className="text-white text-2xl font-bold">Job Portal</p>
+              <p className="text-gray-400 font-medium text-xl ">Use exceptional templates for a stand-out resume minus the sign up process.</p>
+            </div>
+
+            <div className="w-64 flex flex-col items-center mb-12">
+              <Image className="w-40 h-40" src={icon3} alt={"P1"}></Image>
+              <p className="text-white text-2xl font-bold">Experience Portal</p>
+              <p className="text-gray-400 font-medium text-xl ">PW skill's self-paced experience portal priorities hands-on training with 570+ internship projects.</p>
+            </div>
+
+            <div className="w-64 flex flex-col items-center mb-12">
+              <Image className="w-40 h-40" src={icon1} alt={"P1"}></Image>
+              <p className="text-white text-2xl font-bold">Affiliate</p>
+              <p className="text-gray-400 font-medium text-xl ">Explore affiliate marketing oppurtunities with PW Skills and attain financial freedom. </p>
+            </div>
+
+            <div className="w-64 flex flex-col items-center mb-12">
+              <Image className="w-40 h-40" src={icon2} alt={"P1"}></Image>
+              <p className="text-white text-2xl font-bold">Hall of fame</p>
+              <p className="text-gray-400 font-medium text-xl "> Our student placements and 100k career transitions speak volumes about our courses.</p>
+            </div>
+
+
+            </div>
+            
         </div>
-      </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* Footer */}
+        <footer className="w-full text-white bg-gray-900 flex flex-col text-center items-center md:items-start md:flex-row flex-wrap justify-between px-4 md:px-12 pt-6  ">
+          <div className="flex flex-col items-center md:items-start ">
+            <Image className="w-40 h-12 my-6" src={FtLogo} alt={"Ftlogo"}></Image>
+            <p className="pb-6">Email us: info@tafzeel.pk</p>
+            <Image className="w-32 h-32" src={ISO} alt={"iso"}></Image>
+          </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div className="flex flex-col my-6 ">
+            <h2 className="font-bold text-xl">PW Skills</h2>
+            <div className="h-1 w-40 border-t-4 rounded-2xl my-2 border-yellow-500"></div>
+            <div className="space-y-1">
+              <p>About us</p>
+              <p>FAQs</p>
+              <p>Privacy Policy</p>
+            </div>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="flex flex-col my-6 ">
+            <h2 className="font-bold text-xl">Products</h2>
+            <div className="h-1 w-40 border-t-4 rounded-2xl my-2 border-yellow-500"></div>
+            <div className="space-y-1">
+              <p>PW Skills Lab</p>
+              <p>Job Portal</p>
+              <p>Experience Portal</p>
+              <p>Become an affiliate</p>
+              <p>Hall of fame</p>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          <div className="flex flex-col my-6 ">
+            <h2 className="font-bold text-xl">Links</h2>
+            <div className="h-1 w-40 border-t-4 rounded-2xl my-2 border-yellow-500"></div>
+            <div className="space-y-1">
+              <p>Dicord Channel</p>
+              <p>PW Youtube</p>
+              <p>Careers</p>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+        </footer>
+        
+        
+
+
+
+
+      </div>   
+  )
 }
