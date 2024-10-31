@@ -45,7 +45,7 @@ export default function Home() {
           {/* Students Section */}
             <div className="w-full h-auto flex flex-col flex-wrap items-center">
             <p className="text-indigo-800 text-2xl font-bold text-center md:text-4xl ">
-              "Pure Hardwork, No Shortcuts!"
+              Pure Hardwork, No Shortcuts!
             </p>
             <div className="w-32 md:w-48 h-1 border-b-4 border-yellow-500 mt-2 md:mt-4 rounded-2xl mb-12"></div>
             </div>
@@ -74,7 +74,7 @@ export default function Home() {
 
           {/* Products Section */}
             <div className="w-full h-auto flex flex-col flex-wrap items-center mt-12">
-          <p className="text-indigo-800 text-2xl md:text-4xl font-bold  ">"Our Products"</p>
+          <p className="text-indigo-800 text-2xl md:text-4xl font-bold  ">Our Products</p>
           <div className="h-1 w-32 md:w-48 border-b-4 border-yellow-400 rounded-2xl mt-2 md:mt-4 mb-16"></div>
             </div>
 
@@ -94,7 +94,8 @@ export default function Home() {
             <div className="w-64 flex flex-col items-center mb-12">
               <Image className="w-40 h-40" src={icon3} alt={"P1"}></Image>
               <p className="text-white text-2xl font-bold">Experience Portal</p>
-              <p className="text-gray-400 font-medium text-xl ">PW skill's self-paced experience portal priorities hands-on training with 570+ internship projects.</p>
+              <p className="text-gray-400 font-medium text-xl ">PW skill self-paced experience portal priorities hands-on training with 570+ internship projects.</p>
+
             </div>
 
             <div className="w-64 flex flex-col items-center mb-12">
