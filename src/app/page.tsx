@@ -116,7 +116,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="w-full text-white bg-gray-900 flex flex-col text-center items-center md:items-start md:flex-row flex-wrap justify-between px-4 md:px-12 pt-6  ">
+        <footer className="w-full text-white bg-gray-900 flex flex-col text-center md:text-start items-center md:items-start md:flex-row flex-wrap justify-between px-4 md:px-12 pt-6  ">
           <div className="flex flex-col items-center md:items-start ">
             <Image className="w-40 h-12 my-6" src={FtLogo} alt={"Ftlogo"}></Image>
             <p className="pb-6">Email us: info@tafzeel.pk</p>
