@@ -41,7 +41,7 @@ export default function Home() {
             <SheetTrigger>
             <Menu />
             </SheetTrigger>
-            <SheetContent className="bg-indigo-950 border-l-2  bg-opacity-35">
+            <SheetContent side={"left"} color="white" className="bg-indigo-950 text-white border-r-2 bg-opacity-35 w-[300px]">
               <SheetHeader>
                 <SheetDescription>
               <ul className="flex flex-col flex-wrap font-medium gap-5 underline mt-20 text-white">
